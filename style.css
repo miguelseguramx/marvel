@@ -1,0 +1,249 @@
+:root {
+  --dark-gray: #999;
+  --light-gray: #bbb;
+  --small: 12px;
+  --dark: #151515;
+  --white: #fff;
+  --textFont: 'Roboto', arial; 
+  --condensed: 'Roboto Condensed', sans-serif;
+}
+
+/* *, *:before, *:after {
+  box-sizing: inherit;
+}  */
+html {
+  /* box-sizing: border-box; */
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin: 0px;
+  font-family: var(--textFont);
+  letter-spacing: 1px;
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
+}
+h4{
+  margin:0;
+  font-size: 14px;
+}
+p{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Footer Logo */
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background-color: var(--dark);
+  color: white;
+  padding: 80px 0 30px 0px;
+}
+
+.footer-container{
+  max-width: 1220px;
+  padding: 0px 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+.footer-content{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2.5fr 5fr;
+  grid-template-rows: 1fr;
+}
+.about-and-image{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  /* justify-content: space-between; */
+  min-height: 150px;
+}
+.about-menu{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.about-left{
+  margin: 0px 60px 0px 60px;
+  min-width: 140px;
+  font-weight: bold;
+}
+.about-right{
+  margin-right: 30px;
+}
+.about-item{
+  color: var(--white);
+  /* font-weight: lighter; */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin: 12px 0px;
+  width: auto;
+}
+.about-item:first-of-type{
+  margin-top: 0px;
+}
+
+.hover-gray:hover{
+  color: var(--light-gray)
+}
+
+.footer-logo{
+  width: 80px;
+}
+
+
+.promo-and-social{
+  display: flex;
+  flex-direction: row;
+  /* width: 50%; */
+  /* justify-content: space-around; */
+}
+.promos{
+  margin: 0 auto 40px;
+}
+.promo-item{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+.promo-item:first-child{
+  padding-bottom: 30px;
+}
+.promo__img-container{
+  width: 60px;
+  height: auto;
+}
+.promo-img{
+  width: 60px;
+  height: auto;
+}
+.promo-info{
+  padding-left: 30px;
+}
+.promo-title{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+  font-family: var(--condensed);
+}
+.promo-description{
+  font-size: 14px;
+  color: var(--dark-gray);
+}
+
+/* -------------- */
+/* Social Seccion */
+/* ------------- */
+
+/* social-media
+social-title*/
+.social-media{
+  width: 30%;
+  margin-left: 40px;
+}
+.social-title{
+  text-transform: uppercase;
+  font-family: var(--condensed);
+}
+.social-list{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.social-item{
+  display: inline-block;
+  margin-top: 20px;
+  /* padding-right: 20px; */
+  /* margin-right: 25px; */
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  transition: .3s;
+}
+/* .social-item:hover{
+  
+} */
+.icon-facebook{
+  background-image: url('/static/Icon\ awesome-facebook-square.png');
+}
+.icon-twit{
+  background-image: url('/static/Icon\ awesome-twitter.png');
+}
+.icon-insta{
+  background-image: url('/static/Icon\ ionic-logo-instagram.png');
+}
+.icon-twitch{
+  background-image: url('/static/Icon\ awesome-tumblr.png');
+}
+.icon-youtube{
+  background-image: url('/static/Icon\ awesome-youtube.png');
+}
+.icon-snap{
+  background-image: url('/static/Icon\ awesome-snapchat-ghost.png');
+}
+.icon-pint{
+  background-image: url('/static/Icon\ awesome-pinterest.png');
+}
+
+/* -------------- */
+/* LEGAL SECCION */
+/* ------------- */
+.legal-info {
+  max-width: 1240px;
+  margin-top: 30px;
+  letter-spacing: 0px;
+}
+.legal-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.legal-text {
+  color: var(--dark-gray);
+  font-size: var(--small);
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+.hover-white:hover {
+  color: white
+}
+
+/* PPadding 10 an m 10 legal text */
+
+/* -601px */
+/* .footer-logo{ 30px }  */
+
+@media (max-width: 1045px) {
+    /* .footer-content{
+      grid-template-columns: 410px 1fr;
+    } */
+  .about-left{
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 839px) {
+  .social-list {
+    justify-content: initial;
+  }
+}
