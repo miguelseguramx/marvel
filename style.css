@@ -178,7 +178,7 @@ social-title*/
   height: 20px;
   background-repeat: no-repeat;
   background-position: left center;
-  transition: .3s;
+  transition: .5s;
 }
 /* .social-item:hover{
   
@@ -203,6 +203,28 @@ social-title*/
 }
 .icon-pint{
   background-image: url('/static/Icon\ awesome-pinterest.png');
+}
+
+.icon-facebook:hover{
+  background-image: url('/static/facebook-white.png');
+}
+.icon-twit:hover{
+  background-image: url('/static/twit-white.png');
+}
+.icon-insta:hover{
+  background-image: url('/static/inst-white.png');
+}
+.icon-twitch:hover{
+  background-image: url('/static/tumblr-white.png');
+}
+.icon-youtube:hover{
+  background-image: url('/static/youtube-white.png');
+}
+.icon-snap:hover{
+  background-image: url('/static/snap-white.png');
+}
+.icon-pint:hover{
+  background-image: url('/static/pinterest-white.png');
 }
 
 /* -------------- */
