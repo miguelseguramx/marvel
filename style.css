@@ -43,6 +43,87 @@ a{
   width: fit-content;
 }
 
+.header {
+  font-family: var(--condensed);
+  text-transform: uppercase;
+}
+
+/* Header */
+
+.header {
+  background-color: var(--dark);
+}
+
+.header__top{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  border-bottom: thin solid var(--darker-gray);
+}
+
+.header__top-grid{
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 170px 1fr 190px 50px;
+  grid-template-rows: 51px;
+  border-left: thin solid var(--darker-gray);
+  border-right: thin solid var(--darker-gray);
+}
+
+.burguer-menu,
+.user-menu,
+.logo,
+.credit-card,
+.search{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--white);
+  font-size: 12px;
+}
+
+.burguer-menu {
+  display: none;
+}
+.user-menu{
+  /* width: 100%; */
+  display: flex;
+}
+.header__top-img {
+  margin-left: 10px;
+}
+.header__top-img:nth-of-type(1){
+  margin-left: 30px;
+}
+.header__top-letters{
+  margin-left: 10px;
+  line-height: .9;
+}
+.logo{
+  border-left: thin solid var(--darker-gray);
+  border-right: thin solid var(--darker-gray);
+} 
+.logo__img-container{
+  position: relative;
+  left: 3%;
+  width: 130px;
+  height: 51px;
+  background-image: url('./static/marvel-icon.svg');
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+.credit-card{
+  /* width: 100%; */
+  display: flex;
+}
+/* .user-menu__mastercard{
+}*/
+.search{
+  border-left: thin solid var(--darker-gray);
+}
+
 /* Footer */
 
 .footer {
@@ -135,17 +216,17 @@ a{
 .promo-info{
   padding-left: 30px;
 }
-.promo-title{
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  line-height: 1;
-  font-family: var(--condensed);
-}
 .promo-description{
   font-size: 14px;
   color: var(--dark-gray);
 }
 
+.promo-title,
+.social-title{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+}
 /* Social Seccion */
 
 /* social-media
@@ -153,10 +234,6 @@ social-title*/
 .social-media{
   width: 30%;
   margin-left: 40px;
-}
-.social-title{
-  text-transform: uppercase;
-  font-family: var(--condensed);
 }
 .social-list{
   width: 100%;
