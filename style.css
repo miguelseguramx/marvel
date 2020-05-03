@@ -5,7 +5,7 @@
   --small: 12px;
   --dark: #151515;
   --white: #fff;
-  --textFont: 'Roboto', arial; 
+  --normal: 'Roboto', arial; 
   --condensed: 'Roboto Condensed', sans-serif;
 }
 
@@ -19,7 +19,7 @@ html {
 body {
   min-height: 100%;
   margin: 0px;
-  font-family: var(--textFont);
+  font-family: var(--normal);
   letter-spacing: 1px;
 }
 ul{
@@ -74,7 +74,7 @@ a{
 .burguer-menu,
 .user-menu,
 .logo,
-.credit-card,
+.credit-card-menu,
 .search{
   display: flex; 
   justify-content: center;
@@ -84,18 +84,17 @@ a{
   font-size: 12px;
 }
 
+.header__top-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .burguer-menu {
   display: none;
 }
 .user-menu{
   /* width: 100%; */
   display: flex;
-}
-.header__top-img {
-  margin-left: 10px;
-}
-.header__top-img:nth-of-type(1){
-  margin-left: 30px;
 }
 .header__top-letters{
   margin-left: 10px;
@@ -114,15 +113,23 @@ a{
   background-position: top left;
   background-repeat: no-repeat;
 }
-.credit-card{
+.credit-card-menu{
   /* width: 100%; */
   display: flex;
 }
-/* .user-menu__mastercard{
-}*/
 .search{
   border-left: thin solid var(--darker-gray);
 }
+
+.header__low {
+  font-family: var(--normal);
+  color: var(--white);
+}
+
+/* .header_promo-text{
+  font-size: 11px;
+} */
+
 
 /* Footer */
 
@@ -334,6 +341,30 @@ social-title*/
 }
 
 @media (max-width: 839px) {
+
+  /* Header */
+  .header__top,
+  .header__top-grid,
+  .logo,
+  .search {
+    border: none;
+  }
+  .header__top-grid{
+    /* display: grid; */
+    grid-template-columns: 70px 1fr 70px;
+    border: none;
+  }
+  .logo__img-container {
+    left: 0;
+  }
+  .burguer-menu {
+    display: flex;
+  }
+  .user-menu,
+  .credit-card-menu {
+    display: none;
+  }
+
   .footer{
     padding: 50px 0px 38px;
   }
