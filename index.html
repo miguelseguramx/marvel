@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
   <title> Marvel</title>
 </head>
 <body>
@@ -65,76 +66,110 @@
     </div>
   </header>
 
+  <section class="promo">
+    <div class="promo__container">
+      <div class="promo__img">
+        <figure class="promo__img-wrapper">
+          <picture class="promo__asset">
+            <source srcset="https://terrigen-cdn-dev.marvel.com/content/prod/1x/02mm_promo_dsk-1140x680.jpg" media="(min-width: 839px)">
+            <source srcset="https://terrigen-cdn-dev.marvel.com/content/prod/1x/02mm_promo_mob-1680x720.jpg">
+            <img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/02mm_promo_dsk-1140x680.jpg" alt="Marvel Mastercard Ⓒ 2020 MARVEL">
+          </picture>
+        </figure>
+      </div>
+      <div class="promo__info">
+        <div class="promo__eyebrown">
+          Marvel Mastercard &reg;
+        </div>
+        <div class="promo__title">
+          Earn a $25 Statement Credit
+        </div>
+        <div class="promo__cta">
+          <div class="poly-btn poly-btn--red">
+            <p class="poly-btn__content">Learn More</p>
+          </div>
+        </div>
+        <div class="promo__legal">
+          Terms and Conditions Apply. &copy; 2020 MARVEL
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="poly-btn poly-btn--red">
+    <p class="poly-btn__content">Learn More</p>
+  </div>
+
   <footer class="footer">
     <div class="footer-container">
       
       <div class="footer-content">
         <div class="about-and-image">
-          <a href="#header"><img class="footer-logo" src="./static/m-icon.svg" alt="marvel logo"></a>
-          <nav class="about-menu">
-            <ul class="about-left">
-              <li class="about-item hover-gray"><a href="">About Marvel</a></li>
-              <li class="about-item hover-gray"><a href="">Help/Faqs</a></li>
-              <li class="about-item hover-gray"><a href="">Careers</a></li>
-              <li class="about-item hover-gray"><a href="">Internships</a></li>
+          <a href="#header"><img class="footer__logo" src="./static/m-icon.svg" alt="marvel logo"></a>
+          <nav class="footer__about-menu">
+            <ul class="footer__about-left">
+              <li class="footer__about-item hover-gray"><a href="">About Marvel</a></li>
+              <li class="footer__about-item hover-gray"><a href="">Help/Faqs</a></li>
+              <li class="footer__about-item hover-gray"><a href="">Careers</a></li>
+              <li class="footer__about-item hover-gray"><a href="">Internships</a></li>
             </ul>
-            <ul class="about-right">
-              <li class="about-item hover-gray"><a href="">Advertising</a></li>
-              <li class="about-item hover-gray"><a href="">Marvelhq.com</a></li>
-              <li class="about-item hover-gray"><a href="">Redeem digital comics</a></li>
+            <ul class="footer__about-right">
+              <li class="footer__about-item hover-gray"><a href="">Advertising</a></li>
+              <li class="footer__about-item hover-gray"><a href="">Marvelhq.com</a></li>
+              <li class="footer__about-item hover-gray"><a href="">Redeem digital comics</a></li>
             </ul>
           </nav>
         </div>
   
         <div class="promo-and-social">
-          <div class="promos">
-            <div class="promo-item">
-              <div class="promo__img-container">
+          <div class="footer__promos">
+            <div class="footer__promo-item">
+              <div class="footer__promo-img-container">
                 <img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvel_insider-topnav-logo-large2x.png" srcset="https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvel_insider-topnav-logo-large2x.png" alt="Marvel Insider Logo" class="promo-img"/>
               </div>
-              <div class="promo-info">
-                <h4 class="promo-title">Marvel Insider</h4>
+              <div class="footer__promo-info">
+                <h4 class="footer__promo-title">Marvel Insider</h4>
                 <p class="promo-description">Get rewarded for Being a Marvel Fan</p>
               </div>
             </div>
-            <div class="promo-item">
-              <div class="promo__img-container">
+            <div class="footer__promo-item">
+              <div class="footer__promo_img-container">
                 <img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/mastercard-crop_0-footer-v3.png" srcset="https://terrigen-cdn-dev.marvel.com/content/prod/1x/mastercard-crop_0-footer-v3.png" alt="Marvel Mastercard" class="promo-img" />
               </div>
-              <div class="promo-info">
-                <h4 class="promo-title">Marvel Mastercard	&reg;</h4>
-                <p class="promo-description">6 cards designs - Unlimited cashback</p>
+              <div class="footer__promo-info">
+                <h4 class="footer__promo-title">Marvel Mastercard	&reg;</h4>
+                <p class="footer__promo-description">6 cards designs - Unlimited cashback</p>
               </div>
             </div>
           </div>
     
-          <div class="social-media">
-            <h4 class="social-title">Follow Marvel</h4>
-            <ul class="social-list">
-              <li class="social-item icon-facebook"></li>
-              <li class="social-item icon-twit"></li>
-              <li class="social-item icon-insta"></li>
-              <li class="social-item icon-twitch"></li>
-              <li class="social-item icon-youtube"></li>
-              <li class="social-item icon-snap"></li>
-              <li class="social-item icon-pint"></li>
+          <div class="footer__social-media">
+            <h4 class="footer__social-title">Follow Marvel</h4>
+            <ul class="footer__social-list">
+              <li class="footer__social-item icon-facebook"></li>
+              <li class="footer__social-item icon-twit"></li>
+              <li class="footer__social-item icon-insta"></li>
+              <li class="footer__social-item icon-twitch"></li>
+              <li class="footer__social-item icon-youtube"></li>
+              <li class="footer__social-item icon-snap"></li>
+              <li class="footer__social-item icon-pint"></li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="legal-info">
-        <ul class="legal-list">
-          <li class="legal-text hover-white"><a href="/">Terms of use</a></li>
-          <li class="legal-text hover-white"><a href="/">Privacy Policy</a></li>
-          <li class="legal-text hover-white"><a href="/">Privacy Policy</a></li>
-          <li class="legal-text hover-white"><a href="/">Your California Privacy Rights</a></li>
-          <li class="legal-text hover-white"><a href="/">Do Not Sell My Info</a></li>
-          <li class="legal-text hover-white"><a href="/">Children's Online Privacy Policy</a></li>
-          <li class="legal-text hover-white"><a href="/">License Agreement</a></li>
-          <li class="legal-text hover-white"><a href="/">Interest-Based Ads</a></li>
-          <li class="legal-text hover-white"><a href="/">Marvel Insider Terms</a></li>
-          <span><li class="legal-text hover-white"><a href="/">©2020 MARVEL</a></li></span>
+      <div class="footer__legal-info">
+        <ul class="footer__legal-list">
+          <li class="footer__legal-text hover-white"><a href="/">Terms of use</a></li>
+          <li class="footer__legal-text hover-white"><a href="/">Privacy Policy</a></li>
+          <li class="footer__legal-text hover-white"><a href="/">Privacy Policy</a></li>
+          <li class="footer__legal-text hover-white"><a href="/">Your California Privacy Rights</a></li>
+          <li class="footer__legal-text hover-white"><a href="/">Do Not Sell My Info</a></li>
+          <li class="footer__legal-text hover-white"><a href="/">Children's Online Privacy Policy</a></li>
+          <li class="footer__legal-text hover-white"><a href="/">License Agreement</a></li>
+          <li class="footer__legal-text hover-white"><a href="/">Interest-Based Ads</a></li>
+          <li class="footer__legal-text hover-white"><a href="/">Marvel Insider Terms</a></li>
+          <span><li class="footer__legal-text hover-white"><a href="/">©2020 MARVEL</a></li></span>
         </ul>
       </div>
 
