@@ -473,7 +473,7 @@ footer__social-title*/
     flex-direction: column;
     align-items: baseline;
   }
-  .promos{
+  .footer__promos{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
@@ -521,7 +521,7 @@ footer__social-title*/
   .promo__img-container{
     width: 80px;
   }
-  .promo-img{
+  .footer__promo-img{
     width: 80px;
   }
 }
