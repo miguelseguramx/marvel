@@ -172,7 +172,7 @@ figure{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 315px;
+  height: 375px;
 }
 .promo__img{
   display: flex;
@@ -189,7 +189,6 @@ figure{
 }
 .promo__title{
   font-size: 26px;
-  font-weight: bold;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -413,7 +412,7 @@ footer__social-title*/
 }
 
 @media (max-width: 839px) {
-
+  
   /* Header */
   .header__top,
   .header__top-grid,
@@ -435,6 +434,15 @@ footer__social-title*/
   .user-menu,
   .credit-card-menu {
     display: none;
+  }
+
+  .promo__container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 240px;
+  }
+  .promo__info{
+    justify-content: flex-start;
+    height: 240px;
   }
 
   .footer{
@@ -515,5 +523,20 @@ footer__social-title*/
   }
   .promo-img{
     width: 80px;
+  }
+}
+
+@media(max-width: 400px){
+  .promo__container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 270px;
+  }
+  .promo__info{
+    justify-content: flex-start;
+    height: 270px;
+  }
+  .promo__title{
+    max-width: 300px;
+    text-align: center;
   }
 }
