@@ -575,6 +575,34 @@ footer__social-title*/
     height: 240px;
   }
 
+  .feed__container{
+    padding: 0px 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto-fit auto-fit;
+    grid-column-gap: 60px;
+  }
+  .feed__latest-list{
+    margin: 20px 0px; 
+  }
+  .feed__latest-item{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto-fit auto-fit;
+  }
+  .feed__latest-item-content{
+    padding: 20px 30px 0px 0px;
+  }
+  .feed__hype{
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .feed__hype-item{
+    grid-template-columns: 1fr 2fr;
+  }
+  .feed__hype-item-content{
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+  }
+
   .footer{
     padding: 50px 0px 38px;
   }
