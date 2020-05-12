@@ -1004,6 +1004,14 @@ footer__social-title*/
     display: none;
   }
 
+  /* Master hero */
+  .master-hero__img{
+    width: 100%;
+    min-width: 500px;
+    position: absolute;
+    right: 0;
+  }
+
   /* Hero */
   .hero{
     clip-path: polygon(0 0, 0 100%, 100% 95%, 100% 0% );
@@ -1213,7 +1221,7 @@ footer__social-title*/
 }
 
 @media(max-width: 500px) {
-  
+
 }
 
 @media(max-width: 439px){
@@ -1228,6 +1236,9 @@ footer__social-title*/
   }
   .hero__btn-container .poly-btn{
     margin-top: 10px;
+  }
+  .master-hero__img{
+    right: calc(100vw - 120vw);
   }
   
   .promo__container{
