@@ -580,12 +580,15 @@ img {
   width: 100%;
 }
 .video__overlay-icon{
-  width: 30px;
+  min-width: 30px;
   height: 30px;
   background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 35%;
+  left: 40%;
 }
 .video__overlay-icon-play{
   width: 30%;
@@ -602,9 +605,12 @@ img {
 }
 
 .video__item--active .video__overlay{
-  border: 2px solid var(--red-marvel);
   background-color: hsla(0, 0%, 100%, 0);
   box-sizing: border-box;
+}
+
+.video__item--active .video__poster img{
+  border: 2px solid var(--red-marvel);
 }
 
 .video__item--active .video__overlay-title{
@@ -993,6 +999,33 @@ footer__social-title*/
     display: flex; 
     justify-content: center;
     flex-direction: column;
+  }
+
+  /* Videos */
+  .videos__container{
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .videos-list__container{
+    min-height: 220px;
+  }
+  .videos-list{
+    display: flex;
+    padding: 30px 0px 30px 20px;
+    grid-area: 3 / 1 / 4 / 2;
+    width: fit-content;
+  }
+  .video__item{
+    min-width: 180px;
+    margin-right:20px;
+  }
+  .video__overlay-title{
+    position: absolute;
+    top: 95%;
+    padding: 8px 0px;
+  }
+  .video__item--active .video__overlay-title{
+    display: block;
   }
 
   /* Promo */
