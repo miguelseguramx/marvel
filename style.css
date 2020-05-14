@@ -203,7 +203,7 @@ img {
   display: flex;
   min-width: fit-content;
   position: absolute;
-  left: 000vw;
+  left: 0vw; /*Adjustar para  debuggear*/
   animation-name: hero-carousel-desktop;
   animation-duration: 20s;
   animation-iteration-count: infinite;
@@ -222,17 +222,25 @@ img {
   min-width: 1000px;
   position: absolute;
   right: 0;
+  z-index: -1;
 }
 
+.master-hero__black-overlay{
+  min-height: 470px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(90deg, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 60%);
+}
 .master-hero__overlay{
   min-height: 470px;
   width: 100%;
   position: absolute;
   top: 0;
-  background-image: linear-gradient(90deg, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 50%);
+  /* display: none; Para debuggear a gusto */
 }
 .master-hero__overlay-container{
-  max-width: 1200px;
+  max-width: 1240px;
   min-height: 470px;
   margin: auto;
   position: relative;
@@ -268,6 +276,32 @@ img {
 .master-hero__overlay-title{
   font-weight: var(--bold);
   font-size: 14px;
+}
+
+.master-hero__info{
+  color: var(--white);
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.master-hero__info-container{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+.master-hero__title{
+  font-size: 43px; /*100/90026*/
+  text-transform: uppercase;
+  font-family: var(--condensed);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.master-hero__subtitle{
+  letter-spacing: 0;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 /* Hero */
@@ -315,6 +349,7 @@ img {
 .hero__content-img{
   max-width: 80vw;
 }
+.master-hero__eyebrown,
 .hero__eyebrown,
 .tipical-grid__title-container,
 .feed__latest-title-container {
@@ -324,6 +359,7 @@ img {
   background-position: center left;
   padding: 26px 0px;
 }
+.master-hero__eyebrown-content,
 .hero__eyebrown-content,
 .tipical-grid__title,
 .feed__hype-title,
@@ -334,10 +370,14 @@ img {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.master-hero__eyebrown-content,
 .hero__eyebrown-content{
   font-size: 20px; 
   letter-spacing: 3px;
   color: var(--white);
+}
+.master-hero__eyebrown-content{
+  font-size: 16px;
 }
 .hero__title{
   text-transform: uppercase;
@@ -349,13 +389,16 @@ img {
 }
 .hero__description{
   font-size: 16px;
-  padding-bottom: 24px;
+  padding-bottom: 14px;
 }
+.master-hero__btn-container,
 .hero__btn-container{
   display: flex;
 }
+.master-hero__btn-container .poly-btn,
 .hero__btn-container .poly-btn{
   margin-right: 10px;
+  margin-top: 10px;
 }
 
 /* Hero footer */
@@ -1011,8 +1054,14 @@ footer__social-title*/
     position: absolute;
     right: 0;
   }
+  .master-hero__black-overlay{
+   background-image: none;
+  }
   .master-hero__overlay{
     display: none;
+  }
+  .master-hero__title{
+    font-size:26px;
   }
 
   /* Hero */
@@ -1234,6 +1283,7 @@ footer__social-title*/
 }
 
 @media(max-width: 400px){
+  .master-hero__btn-container,
   .hero__btn-container{
     flex-direction: column;
   }
