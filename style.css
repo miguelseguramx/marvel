@@ -190,12 +190,12 @@ img {
 .master-hero{
   min-height: 459.33px;
   position: relative;
-  margin: 0 0 40px 0;
+  margin: 0 0 50px 0;
 }
 .master-hero__carousel-img-container{
   overflow: hidden;
   position: relative;
-  min-height: 470px;
+  min-height: 470px; /*Proporcion 470px * 100 / 1250px */
   clip-path: polygon(0 0, 0 100%, 100% 90%, 100% 0% );
   background-color: var(--dark);
 }
@@ -203,7 +203,7 @@ img {
   display: flex;
   min-width: fit-content;
   position: absolute;
-  left: 0vw; /*Adjustar para  debuggear*/
+  left: 000vw; /*Adjustar para  debuggear*/
   animation-name: hero-carousel-desktop;
   animation-duration: 20s;
   animation-iteration-count: infinite;
@@ -219,10 +219,26 @@ img {
 }
 .master-hero__img{
   width: 100%;
-  min-width: 1000px;
   position: absolute;
+  min-width: 1300px;
   right: 0;
   z-index: -1;
+}
+@media(max-width: 1300px){
+  .master-hero__img{
+  /* When you have a screen of 1300px the image is in rigth 0px*/
+  /* When you have a screen of 840px the image is in right -210px */
+  /* So: */
+  /* 1300px - 840px = 460px */
+  /* 460px / -210px = -2.1904761 */
+  /* Every -2.1904px smaller the image moves 1 px to achive the effect*/
+  /* Example: */
+  /* Rigth in 1000px: */
+  /* 1300px - 1000px = 300px */
+  /* 300px / -2.1904px = -136.9565 */
+  /* rigth: -136.9565px */
+    right: calc(calc(1300px - 100vw) / -2.1904761);
+  }
 }
 
 .master-hero__black-overlay{
@@ -237,7 +253,8 @@ img {
   width: 100%;
   position: absolute;
   top: 0;
-  /* display: none; Para debuggear a gusto */
+  /* This line allow us work better if we are playing with the info of the master hero */
+  /* display: none;*/
 }
 .master-hero__overlay-container{
   max-width: 1240px;
@@ -251,7 +268,7 @@ img {
   bottom: -20px;
   grid-template-columns: repeat(5, 1fr);
   min-width: 839px;
-  width: 100%;
+  width: 80%;
   max-width: 1000px;
   background-color: var(--white);
   padding: 0px 20px;
@@ -277,7 +294,6 @@ img {
   font-weight: var(--bold);
   font-size: 14px;
 }
-
 .master-hero__info{
   color: var(--white);
   position: relative;
@@ -288,11 +304,11 @@ img {
 .master-hero__info-container{
   width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 20px;
 }
 .master-hero__title{
-  font-size: 43px; /*100/90026*/
+  font-size: 44px; /*100/90026*/
   text-transform: uppercase;
   font-family: var(--condensed);
   font-weight: 700;
@@ -302,6 +318,10 @@ img {
   letter-spacing: 0;
   font-size: 16px;
   margin-bottom: 10px;
+}
+.master-hero__title,
+.master-hero__subtitle{
+  max-width: 55%;
 }
 
 /* Hero */
@@ -1022,6 +1042,13 @@ footer__social-title*/
   }
 }
 
+/* @media (max-width: 950px) and (min-width: 840px) {
+  .master-hero__title,
+  .master-hero__subtitle{
+    max-width: 50%;
+  }
+} */
+
 @media (max-width: 839px) {
   
   /* Header */
@@ -1048,11 +1075,25 @@ footer__social-title*/
   }
 
   /* Master hero */
+  .master-hero__carousel-img-container{
+    min-height: 120vh;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0% );
+  }
+  .master-hero__img-container{
+    min-height: 120vw;
+  }
+  .master-hero__info-container{
+    padding: 30px;
+  }
+  .master-hero__eyebrown{
+    background-image: none;
+    padding: 0px 0px 10px;
+  }
   .master-hero__img{
     width: 100%;
     min-width: 500px;
     position: absolute;
-    right: 0;
+    right: 0px;
   }
   .master-hero__black-overlay{
    background-image: none;
@@ -1061,7 +1102,16 @@ footer__social-title*/
     display: none;
   }
   .master-hero__title{
-    font-size:26px;
+    font-size: 26px;
+    max-width: 100%;
+  }
+  .master-hero__subtitle{
+    max-width: 100%;
+  }
+  .master-hero__info{
+    top: 47.617233vw;
+    position: absolute;
+    align-items: flex-start;
   }
 
   /* Hero */
@@ -1239,7 +1289,7 @@ footer__social-title*/
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) {  
   .footer-content{
     grid-template-rows: 250px 1fr;
   }
@@ -1273,6 +1323,24 @@ footer__social-title*/
 }
 
 @media(max-width: 500px) {
+  .master-hero__carousel-img-container{
+    min-height: 120vh;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0% );
+  }
+  /* When you have a screen of 500px the image is in rigth 0px*/
+  /* When you have a screen of 375px the image is in right -62.5px */
+  /* So: */
+  /* 500px - 375px = 125px */
+  /* 125px / -62.5px = -2 */
+  /* Every -2px smaller the image moves 1 px to achive the effect*/
+  .master-hero__img{
+    right: calc(calc(500px - 100vw) / -2);
+  }
+  .master-hero__info{
+    top:238px;
+    position: absolute;
+    align-items: flex-start;
+  }
 
 }
 
@@ -1290,10 +1358,6 @@ footer__social-title*/
   .hero__btn-container .poly-btn{
     margin-top: 10px;
   }
-  .master-hero__img{
-    right: calc(100vw - 120vw);
-  }
-  
   .promo__container{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 270px;
