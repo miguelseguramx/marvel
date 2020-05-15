@@ -1114,6 +1114,46 @@ footer__social-title*/
     align-items: flex-start;
   }
 
+  /* Progress Dots */
+  .progress-dots__container{
+    position: absolute;
+    width: 100%;
+    top: 47.617233vw;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  .progress-dots{
+    display: grid;
+    width: 120px;
+    margin: auto;
+    grid-template-columns: repeat(5, 24px);
+  }
+  .progress-dots__item{
+    width: 18px;
+    height: 3px;
+    margin: 0 3px;
+    background-color: var(--white);
+    animation-name: progress-dots;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .progress-dots__item:nth-of-type(2){
+    animation-delay: 4s;
+  }
+  .progress-dots__item:nth-of-type(3){
+    animation-delay: 8s;
+  }
+  .progress-dots__item:nth-of-type(4){
+    animation-delay: 12s;
+  }
+  .progress-dots__item:nth-of-type(5){
+    animation-delay: 16s;
+  }
+  
+
   /* Hero */
   .hero{
     clip-path: polygon(0 0, 0 100%, 100% 95%, 100% 0% );
@@ -1340,6 +1380,9 @@ footer__social-title*/
     top:238px;
     position: absolute;
     align-items: flex-start;
+  }
+  .progress-dots__container{
+    top:238px;
   }
 
 }

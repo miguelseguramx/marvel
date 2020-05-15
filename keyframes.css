@@ -102,3 +102,21 @@
     width: 19.2%;
   }
 }
+
+@keyframes progress-dots {
+  0% {
+    background-color: var(--white);
+  }
+  .8% {
+    background-color: var(--red-marvel);
+  }
+  19.9% {
+    background-color: var(--red-marvel);
+  }
+  20%{
+    background-color: var(--white);
+  }
+  100%{
+    background-color: var(--white);
+  }
+}
