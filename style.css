@@ -423,9 +423,6 @@ img {
 
 /* Hero footer */
 
-/* .hero-footer{
-  max-width: 100vw;
-} */
 .hero-footer--grid-4{
   min-height: 270px;
   height: 270px;
@@ -1042,38 +1039,7 @@ footer__social-title*/
   }
 }
 
-/* @media (max-width: 950px) and (min-width: 840px) {
-  .master-hero__title,
-  .master-hero__subtitle{
-    max-width: 50%;
-  }
-} */
-
 @media (max-width: 839px) {
-  
-  /* Header */
-  .header__top,
-  .header__top-grid,
-  .logo,
-  .search {
-    border: none;
-  }
-  .header__top-grid{
-    /* display: grid; */
-    grid-template-columns: 70px 1fr 70px;
-    border: none;
-  }
-  .logo__img-container {
-    left: 0;
-  }
-  .burguer-menu {
-    display: flex;
-  }
-  .user-menu,
-  .credit-card-menu {
-    display: none;
-  }
-
   /* Master hero */
   .master-hero__carousel-img-container{
     min-height: 120vh;

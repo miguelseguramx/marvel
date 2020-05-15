@@ -1,0 +1,36 @@
+.header__promo{
+  min-height: 130px;
+  background-color: var(--dark);
+  display: flex;
+  align-items: flex-end;
+}
+.header__promo-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 40px;
+  width: 100%;
+}
+.header_promo-text-large,
+.header_promo-text-small{
+  font-family: var(--condensed);
+  font-size: 12px;
+  max-width: fit-content;
+  color: var(--white);
+  margin-right: 10px;
+}
+.header_promo-text-small{
+  display: none;
+}
+
+@media(max-width: 839px){
+  .header__promo{
+    min-height: 90px;
+  }
+  .header_promo-text-large{
+    display: none;
+  }
+  .header_promo-text-small{
+    display: block;
+  }
+}
