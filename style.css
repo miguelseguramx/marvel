@@ -101,87 +101,11 @@ img {
 }
 /* .poly-btn--white */
 
-.header {
-  font-family: var(--condensed);
-  text-transform: uppercase;
-}
-
-/* Header */
-
-.header {
-  background-color: var(--dark);
-}
-
-.header__top{
-  height: 51px;
-  display: flex;
-  justify-content: center;
-  border-bottom: thin solid var(--darker-gray);
-}
-
-.header__top-grid{
+.u-wrapper{
   width: 100%;
   max-width: 1200px;
-  display: grid;
-  grid-template-columns: 170px 1fr 190px 50px;
-  grid-template-rows: 51px;
-  border-left: thin solid var(--darker-gray);
-  border-right: thin solid var(--darker-gray);
-}
-
-.burguer-menu,
-.user-menu,
-.logo,
-.credit-card-menu,
-.search{
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  color: var(--white);
-  font-size: 12px;
-}
-
-.header__top-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.burguer-menu {
-  display: none;
-}
-.user-menu{
-  /* width: 100%; */
-  display: flex;
-}
-.header__top-letters{
-  margin-left: 10px;
-  line-height: .9;
-}
-.logo{
-  border-left: thin solid var(--darker-gray);
-  border-right: thin solid var(--darker-gray);
-} 
-.logo__img-container{
-  position: relative;
-  left: 3%;
-  width: 130px;
-  height: 51px;
-  background-image: url('./static/marvel-icon.svg');
-  background-position: toleft;
-  background-repeat: no-repeat;
-}
-.credit-card-menu{
-  /* width: 100%; */
-  display: flex;
-}
-.search{
-  border-left: thin solid var(--darker-gray);
-}
-
-.header__low {
-  font-family: var(--normal);
-  color: var(--white);
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Principal hero */
@@ -469,6 +393,7 @@ img {
 .hero-footer__item-title{
   padding-right: 10px;
 }
+.tipical-grid__item-section--red,
 .work-card__title,
 .hero-footer__item-section{
   color: var(--red-marvel); 
@@ -936,21 +861,26 @@ footer__social-title*/
   grid-template-rows: repeat(2, 1fr);
   justify-content: initial;
 }
-.footer__social-item{
-  display: inline-block;
+.footer__social-list .social-item{
   margin-top: 20px;
-  /* padding-right: 20px; */
-  /* margin-right: 25px; */
+}
+.social-item{
+  display: inline-block;
   width: 20px;
   height: 20px;
   background-repeat: no-repeat;
   background-position: left center;
   transition: .5s;
   transition-timing-function: linear;
+  will-change: transform;
 }
-/* .footer__social-item:hover{
-  
-} */
+.social-item:hover{
+  transform: scale(1.1);
+}
+.social-item__link{
+  min-width: 20px;
+  min-height: 20px;
+}
 .icon-facebook{
   background-image: url('/static/logo-facebook.svg');
 }
@@ -960,7 +890,7 @@ footer__social-title*/
 .icon-insta{
   background-image: url('/static/logo-insta.svg');
 }
-.icon-twitch{
+.icon-tum{
   background-image: url('/static/logo-tumblr.svg');
 }
 .icon-youtube{
@@ -973,26 +903,48 @@ footer__social-title*/
   background-image: url('/static/logo-pint.svg');
 }
 
-.icon-facebook:hover{
-  background-image: url('/static/white-logo-facebook.svg');
+.icon-facebook--black:hover{
+  background-image: url('/static/logo-facebook-black.svg');
 }
-.icon-twit:hover{
-  background-image: url('/static/white-logo-twitter.svg');
+.icon-twit--black:hover{
+  background-image: url('/static/logo-twitter-black.svg');
 }
-.icon-insta:hover{
-  background-image: url('/static/white-logo-instagram.svg');
+.icon-insta--black:hover{
+  background-image: url('/static/logo-insta-black.svg');
 }
-.icon-twitch:hover{
-  background-image: url('/static/white-logo-tumblr.svg');
+.icon-tum--black:hover{
+  background-image: url('/static/logo-tumblr-black.svg');
 }
-.icon-youtube:hover{
-  background-image: url('/static/white-logo-youtube.svg');
+.icon-youtube--black:hover{
+  background-image: url('/static/logo-youtube-black.svg');
 }
-.icon-snap:hover{
-  background-image: url('/static/white-snapchat-ghost.svg');
+.icon-snap--black:hover{
+  background-image: url('/static/logo-snap-black.svg');
 }
-.icon-pint:hover{
-  background-image: url('/static/white-logo-pinterest.svg');
+.icon-pint--black:hover{
+  background-image: url('/static/logo-pint-black.svg');
+}
+
+.icon-facebook--white:hover{
+  background-image: url('/static/logo-facebook-white.svg');
+}
+.icon-twit--white:hover{
+  background-image: url('/static/logo-twitter-white.svg');
+}
+.icon-insta--white:hover{
+  background-image: url('/static/logo-insta-white.svg');
+}
+.icon-tum--white:hover{
+  background-image: url('/static/logo-tumblr-white.svg');
+}
+.icon-youtube--white:hover{
+  background-image: url('/static/logo-youtube-white.svg');
+}
+.icon-snap--white:hover{
+  background-image: url('/static/logo-snap-white.svg');
+}
+.icon-pint--white:hover{
+  background-image: url('/static/logo-pint-white.svg');
 }
 
 /* -------------- */
