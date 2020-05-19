@@ -4,6 +4,7 @@
   --dark-gray: #999;
   --darker-gray: #393939;
   --light-gray: #bbb;
+  --yellow: #e8b63e;
   --small: 12px;
   --dark: #151515;
   --white: #fff;
@@ -425,18 +426,23 @@ img {
   bottom: 70px;
   background-color: var(--white);
 }
-.hero-footer__list--grid-6
-.work-card{
+.hero-footer__list--grid-6 .work-card{
   max-width: 175px;
 }
 .work-card__img-container{
   box-shadow: var(--clasicShadow);
   transition: 300ms;
+  max-height: fit-content;
 }
 .work-card__img-figure{
-  width: fit-content;
-  margin: 0px;
-  max-height: 262.5px;
+  /* width: fit-content;
+  max-height: calc(100% - 10px);
+  max-height: calc(100% - 3px) */
+  position: relative;
+} 
+.work-card__img{
+  position: relative;
+  top: 3px;
 }
 .work-card:hover .work-card__title{
   color: var(--red-marvel);
