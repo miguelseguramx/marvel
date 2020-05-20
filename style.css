@@ -59,7 +59,6 @@ img {
 }
 /* Scroll bar */
 
-
 .personalized-scroll-bar::-webkit-scrollbar {
   height: 4px;
   width: 4px;
@@ -1005,8 +1004,10 @@ footer__social-title*/
   }
   .master-hero__img-container{
     min-height: 120vw;
+    overflow: visible;
   }
   .master-hero__info-container{
+    height: max-content;
     padding: 30px;
   }
   .master-hero__eyebrown{

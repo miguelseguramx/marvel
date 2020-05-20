@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-/* Header */
+/* Header Desktop First */
 
 .header {
   background-color: var(--dark);
@@ -28,7 +28,6 @@
   border-left: thin solid var(--darker-gray);
   border-right: thin solid var(--darker-gray);
 }
-
 .burguer-menu,
 .user-menu,
 .logo,
@@ -41,7 +40,9 @@
   color: var(--white);
   font-size: 12px;
 }
-
+.burguer-menu{
+  cursor: pointer;
+}
 .header__top-link {
   display: flex;
   justify-content: center;
@@ -80,7 +81,6 @@
 }
 
 /* Menu mobile first */
-
 .menu{
   position: absolute;
   top: 0;
@@ -88,7 +88,11 @@
   color: var(--white);
   width: 100%;
   z-index: 10;
+  height: 100vh;
+  left: -100%;
+  overflow: auto;
 }
+
 .menu__scroll-area{
   height: 1400px;
   background-color: var(--dark);
@@ -171,11 +175,16 @@
 .menu-item__content-container{
   display: none;
   position: absolute;
+  width: 100%;
   top: 0;
-  left: 100vw;
+  left: 100%;
+  height: 100vh;
+  overflow: auto;
   min-height: calc(100vh - 50px);
   background-color: var(--dark);
+  z-index: 10;
 }
+
 .menu-item__content{
   display: none;
 }
@@ -274,42 +283,38 @@
   width: 100%;
   position: absolute;
   top: calc(343px + 51px);
+  height: max-content;
+  overflow: hidden;
   left: 0vw;
   background-color: var(--white);
 }
-/* Media query for tab menu */
 
+/* Media query for menu in tablets */
 @media(min-width: 600px){
-  /* body{ */
-    /*This is to achive the desire effect*/
-    /* max-height: 100vh; 
-    overflow: hidden;  */
-  /* } */
   .menu{
     position: absolute;
-    max-width: 375px;
+    max-width: 380px;
     overflow: auto;
     height: 100vh;
-    max-height: calc(100vh);
+    max-height: 100vh;
     background-color: var(--dark);
   }
   .menu__scroll-area{
-    height: 100vh;
+    height: calc(100vh - 50px);
   }
   .menu-item__content-container{
-    display: block;
-    left: 0;
-    min-height: calc(100vh - 50px);
+    display: none;
+    left: 100%;
+    height: calc(100vh - 50px);
     z-index: 1;
-    min-width: 360px;
     max-width: 375px;
   }
   .menu-item:last-of-type .menu-item__content-container{
-    display: none;
+    display: block;
   }
 }
 
-/* Media query for menu */
+/* Media query for menu on desktop */
 @media(min-width: 840px){
   .menu{
     position: static;
@@ -323,7 +328,6 @@
     height: 40px;
   }
   .menu-item{
-    /* display: flex; */
     width: fit-content;
   }
   .menu-item:last-of-type .menu-item__title-container{
@@ -392,11 +396,12 @@
     box-sizing: border-box;
     min-width: 100%;
     min-height: 370px;
+    height: auto;
     top: 91px;
     left: 0vw;
     box-shadow: 0 0 1rem rgba(0,0,0,.6);
     opacity: 0;
-    transition-delay: 350ms;
+    transition-delay: 300ms;
   }
   .menu-item:hover .menu-item__content-container{
     visibility: visible;
@@ -483,8 +488,7 @@
     margin-right: 20px;
   }
 }
-/* Media query of the header */
-
+/* Media query of the header desktopfirst*/
 @media (max-width: 839px) {
   /* Header */
   .header__top,
@@ -506,7 +510,7 @@
   }
 }
 
-/* Me nu Gruds */
+/* Menu Grids only for desktop*/
 .menu__news-grid,
 .menu__video-grid{
   display: grid;
