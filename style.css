@@ -172,24 +172,31 @@ img {
   top: 0;
   background-image: linear-gradient(90deg, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 60%);
 }
+.master-hero__link{
+  width: fit-content;
+}
+.master-hero__btn-container .master-hero__link,
+.hero__btn-container .master-hero__link{
+  margin-right: 10px;
+  margin-top: 10px;
+}
 .master-hero__overlay{
-  min-height: 470px;
   width: 100%;
   position: absolute;
-  top: 0;
+  bottom: 40px;
   /* This line allow us work better if we are playing with the info of the master hero */
   /* display: none;*/
 }
 .master-hero__overlay-container{
   max-width: 1240px;
-  min-height: 470px;
+  /* min-height: 470px; */
   margin: auto;
   position: relative;
 }
 .master-hero__overlay-titles-list{
   display: grid;
   position: absolute;
-  bottom: -20px;
+  /* bottom: -20px; */
   grid-template-columns: repeat(5, 1fr);
   min-width: 839px;
   width: 80%;
@@ -338,11 +345,6 @@ img {
 .master-hero__btn-container,
 .hero__btn-container{
   display: flex;
-}
-.master-hero__btn-container .poly-btn,
-.hero__btn-container .poly-btn{
-  margin-right: 10px;
-  margin-top: 10px;
 }
 
 /* Hero footer */
@@ -1124,11 +1126,18 @@ footer__social-title*/
     overflow: hidden;
     min-width: calc(192px * 6);
   }
-  .hero-footer__list--works{
+  .hero-footer__list--works-4
+  .hero-footer__list--works-22{
     overflow: hidden;
-    min-width: calc(194px * 22);
     position: relative;
     bottom: 0px;
+  }
+  .hero-footer__list--works-22{
+    min-width: calc(194px * 22);
+
+  }
+  .hero-footer__list--works-4{
+    min-width: calc(194px * 4);
   }
 
   /* Tipical grid */
