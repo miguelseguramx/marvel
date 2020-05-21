@@ -7,6 +7,9 @@ const $menuItems = document.querySelectorAll('.menu-item__title-container')
 const $goBackMenuButtons = document.querySelectorAll('.menu-item__nav-title-container')
 const $scrollArea = document.querySelector('.menu__scroll-area')
 
+// We can add and remove classes to achive this animation but 
+// I use JS to practice something diferent.
+// We already use add and remove classes on headerScroll
 function activeTheMenu() {
   $openMenu.addEventListener('click', showAllMenu)
   $closeMenu.addEventListener('click', hideAllMenu)
@@ -48,8 +51,9 @@ function hideAllMenu() {
   $body.style.maxHeight = 'initial'
   $scrollArea.style.height = '40px'
 }
-// Lo haremos asi por que si usamos funciones anonimas, en cada evento se creara un nueva referencia a la funcion y no podremos 
-// eliminar el evento, es mejor rastrear el origen del click que remplazar nodos con cada click
+// In this case if we use anonymous functions, on every single event JS will create 
+// a new reference to the function and we will can't remove the eventListener unless 
+// we replace the node with a copy, sounds easier track the origin of the click
 function showSubMenu(e) {
   let $menuContent = null
   if(e.path.length === 10){

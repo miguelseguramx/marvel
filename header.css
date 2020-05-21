@@ -13,6 +13,11 @@
   top: 0;
   z-index: 20;
   background-color: var(--dark);
+  transition-duration: 500ms;
+}
+
+.header--inactive{
+  top: -91px;
 }
 
 .header__top{
@@ -68,7 +73,7 @@
 } 
 .header__top-logo-link{
   position: absolute;
-  left: calc(50% - 75px);
+  left: calc(50% - 70px);
   width: 130px;
   height: 51px;
   overflow: hidden;
@@ -78,10 +83,10 @@
   background-repeat: no-repeat;
   transition-duration: 100ms;
 }
-.header__top-logo-link:hover{
-  left: calc(50% - 15px);
+.header__top-logo-link-active{
+  left: calc(50% - 18px);
   width: 36px;
-  background-size: 36px 51px;;
+  background-size: 36px 51px;
   background-image: url('./static/m-icon.svg');
 }
 
@@ -113,6 +118,7 @@
 .menu__close-container{
   min-height: 51px;
   padding: 20px 30px 0px;
+  background-color: var(--dark);
   box-sizing: border-box;
 }
 .menu-item{
@@ -509,6 +515,9 @@
 }
 /* Media query of the header desktopfirst*/
 @media (max-width: 839px) {
+  .header--inactive{
+    top: -51px;
+  }
   /* Header */
   .header__top,
   .header__top-grid,
