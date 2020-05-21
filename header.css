@@ -9,6 +9,9 @@
 /* Header Desktop First */
 
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 20;
   background-color: var(--dark);
 }
 
@@ -63,15 +66,25 @@
   border-left: thin solid var(--darker-gray);
   border-right: thin solid var(--darker-gray);
 } 
-.logo__img-container{
+.header__top-logo-link{
   position: absolute;
-  left: calc(50% - 68px);
+  left: calc(50% - 75px);
   width: 130px;
   height: 51px;
+  overflow: hidden;
+  background-position: left top;
+  background-size: 130px 51px;
   background-image: url('./static/marvel-icon.svg');
-  background-position: toleft;
   background-repeat: no-repeat;
+  transition-duration: 100ms;
 }
+.header__top-logo-link:hover{
+  left: calc(50% - 15px);
+  width: 36px;
+  background-size: 36px 51px;;
+  background-image: url('./static/m-icon.svg');
+}
+
 .credit-card-menu{
   /* width: 100%; */
   display: flex;

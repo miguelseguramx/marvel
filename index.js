@@ -22,6 +22,9 @@ function desactiveTheMenu() {
   $closeMenu.removeEventListener('click', hideAllMenu)
   $menuItems.forEach($menuItem => {
     $menuItem.removeEventListener('click', showSubMenu)
+    const $subMenuContent = $menuItem.parentElement.childNodes[3]
+    moveSomeMenu($subMenuContent, '100%', '0')
+    $subMenuContent.removeAttribute('style')
   })
   $goBackMenuButtons.forEach($goBackMenuButton => {
     $goBackMenuButton.removeEventListener('click', hideSubMenu)
@@ -45,10 +48,8 @@ function hideAllMenu() {
   $body.style.maxHeight = 'initial'
   $scrollArea.style.height = '40px'
 }
-// Lo haremos asi por que si usamos funciones anonimas, 
-// en cada evento se creara un nueva referencia a la funcion y no podremos 
-// eliminar el evento, es mejor rastrear el origen del click
-// que remplazar nodos con cada click
+// Lo haremos asi por que si usamos funciones anonimas, en cada evento se creara un nueva referencia a la funcion y no podremos 
+// eliminar el evento, es mejor rastrear el origen del click que remplazar nodos con cada click
 function showSubMenu(e) {
   let $menuContent = null
   if(e.path.length === 10){
@@ -61,7 +62,12 @@ function showSubMenu(e) {
   moveSomeMenu($menuContent, '100%', '0', 'hide')
 }
 function hideSubMenu(e) {
-  const $menuContent = e.path[2]
+  let $menuContent = null
+  if(e.path.length === 11){
+    $menuContent = e.path[2].childNodes[3]
+  } else {
+    $menuContent = e.path[3].childNodes[3]
+  }
   setTimeout(() => {
     $menuContent.style.display = 'none'
   }, 500);

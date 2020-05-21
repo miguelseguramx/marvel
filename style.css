@@ -12,7 +12,9 @@
   --condensed: 'Roboto Condensed', sans-serif;
   --bold: 700;
   --red-marvel: #e62429;
+  --dark-red: #9f0013;
   --clasicShadow: 0 7px 17px -8px rgba(0,0,0,.8);
+  --btn-polygon: polygon(0 15px, 0 100%, calc(100% - 15px) 100%, 100% calc(100% - 15px), 100% 0, 15px 0 );
 }
 
 /* *, *:before, *:after {
@@ -90,16 +92,45 @@ img {
   font-size: 14px;
   font-family: var(--normal);
   font-weight: 800;
-  clip-path: polygon(0 30%, 0 100%, 90% 100%, 100% 70%, 100% 0, 10% 0 );
+  clip-path: var(--btn-polygon);
 }
-/* .poly-btn__content{
-  /* margin: 10px; 
-} */
 .poly-btn--red {
   color: var(--white);
   background-color: var(--red-marvel);
 }
-/* .poly-btn--white */
+.poly-btn--red:hover{
+  color: var(--white);
+  background-color: var(--dark-red);
+}
+.poly-btn--white{
+  position: relative;
+  color: var(--white);
+  background-color: var(--white);
+}
+.poly-btn--dark{
+  position: relative;
+  color: var(--dark);
+  background-color: var(--dark);
+}
+.poly-btn__content{
+  z-index: 2;
+}
+.poly-btn--black-white,
+.poly-btn--white-black{
+  z-index: -1;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  clip-path: var(--btn-polygon);
+}
+.poly-btn--white-black{
+  background-color: var(--dark);
+}
+.poly-btn--black-white{
+  background-color: var(--white);
+}
 
 .u-wrapper{
   width: 100%;
@@ -482,7 +513,6 @@ img {
 }
  
 /* Feed */
-/* .feed */
 .feed__container{
   margin: auto;
   padding: 20px; /*Menos de 839 30p*/
@@ -534,14 +564,6 @@ img {
   font-family: var(--condensed); 
   font-weight: bold;
 }
-.poly-btn--white{
-  background-color: white;
-  color: black;
-  border: 2px solid black;
-}
-/* .poly-btn__content--black{
-  color: black;
-} */
 .feed__hype{
   padding: 30px 0 0; 
 }
@@ -601,12 +623,6 @@ img {
   display: grid;
   grid-template-columns: 75% 25%;
 }
-/* .videos__player-container{
-
-}
-.videos__player{
-
-} */
 .video{
   width: 100%;
   box-shadow: 0 35px 54px -25px rgba(0,0,0,.4);
@@ -649,9 +665,6 @@ img {
 .video__poster img {
   width: 100%;
 }
-/* .video__poster-img{
-  
-} */
 .video__overlay{
   height: 98%;
   display: flex;
@@ -1000,8 +1013,7 @@ footer__social-title*/
 }
 
 
-/* -601px */
-/* .footer__logo{ 30px }  */
+
 @media(max-width: 1200px){
   .hero__img-container{
     width: calc(100% + calc(191px * 1.3));
