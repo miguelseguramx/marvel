@@ -175,6 +175,7 @@ img {
 .master-hero__link{
   width: fit-content;
 }
+.hero__link,
 .master-hero__btn-container .master-hero__link,
 .hero__btn-container .master-hero__link{
   margin-right: 10px;
@@ -649,10 +650,10 @@ img {
   width: 100%;
 }
 /* .video__poster-img{
-
+  
 } */
 .video__overlay{
-  height: 100%;
+  height: 98%;
   display: flex;
   align-items: flex-end;
   background-color: hsla(0, 0%, 100%, 0.7);
@@ -667,9 +668,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 35%;
-  left: 40%;
 }
 .video__overlay-icon-play{
   width: 30%;
@@ -679,19 +677,43 @@ img {
 }
 .video__overlay-title{
   max-width: 80%;
-  padding: 8px 10px;
+  padding: 0px 10px 4px;
+  height: fit-content;
+  visibility: visible;
   font-weight: var(--bold);
   font-size: 11px;
   color: var(--dark);
 }
 
-.video__item--active .video__overlay{
-  background-color: hsla(0, 0%, 100%, 0);
-  box-sizing: border-box;
+.video__overlay,
+.video__overlay-title{
+  transition-duration: 0ms;
 }
 
-.video__item--active .video__poster img{
+.video__overlay-icon,
+.video__overlay-icon-play{
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+  transition-property: visibility background-color;
+}
+
+.video__overlay:hover{
+  background-color: hsla(0, 0%, 100%, 0);
+}
+.video__overlay:hover .video__overlay-icon{
+  background-color: var(--red-marvel)
+}
+.video__overlay:hover .video__overlay-icon-play{
+  background-color: var(--white);
+}
+.video__overlay:hover .video__overlay-title{
+  visibility: hidden;
+}
+
+.video__item--active .video__overlay{
+  background-color: hsla(0, 0%, 100%, 0);
   border: 2px solid var(--red-marvel);
+  box-sizing: border-box;
 }
 
 .video__item--active .video__overlay-title{
@@ -1192,10 +1214,22 @@ footer__social-title*/
     min-width: 180px;
     margin-right:20px;
   }
+  .video__overlay{
+    height: 96%;
+    justify-content: center;
+  }
   .video__overlay-title{
     position: absolute;
-    top: 95%;
+    left: 0;
+    top: 100%;
     padding: 8px 0px;
+  }
+  .video__overlay-icon{
+    position: relative; 
+    bottom: 33%;
+  }
+  .video__overlay:hover .video__overlay-title{
+    visibility: visible;
   }
   .video__item--active .video__overlay-title{
     display: block;

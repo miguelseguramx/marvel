@@ -136,6 +136,7 @@
   align-items: center;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .menu-item__nav-img{
   margin-right: 8px;
@@ -148,6 +149,9 @@
 .menu-item__nav-text,
 .menu-item__title{
   padding: 15px 0;
+}
+.menu-item__title{
+  cursor: pointer;
 }
 .menu-item__subnav .menu-item__nav-text {
   padding: 15px 0 15px 32px;
@@ -334,6 +338,7 @@
     display: flex;
   }
   .menu-item__title-container{
+    cursor: default;
     padding: 0 18px;
   }
   .menu-item__subnav .menu-item__nav-text,
@@ -363,6 +368,7 @@
   }
   .menu-item__title{
     padding: 0;
+    cursor: default;
   }
   .menu-item__nav-text:hover{
     color: var(--red-marvel);

@@ -3,41 +3,71 @@ const $menu = document.querySelector('.menu')
 const $openMenu = document.querySelector('.burguer-menu')
 const $closeMenu = document.querySelector('.menu__close-img')
 const $moreMenu = document.getElementById('moreMenu')
-const media = window.matchMedia('(max-width: 839px)')
 const $menuItems = document.querySelectorAll('.menu-item__title-container')
 const $goBackMenuButtons = document.querySelectorAll('.menu-item__nav-title-container')
 const $scrollArea = document.querySelector('.menu__scroll-area')
 
-$openMenu.addEventListener('click', () => {
+function activeTheMenu() {
+  $openMenu.addEventListener('click', showAllMenu)
+  $closeMenu.addEventListener('click', hideAllMenu)
+  $menuItems.forEach($menuItem => {
+    $menuItem.addEventListener('click', showSubMenu)
+  })
+  $goBackMenuButtons.forEach($goBackMenuButton => {
+    $goBackMenuButton.addEventListener('click', hideSubMenu)
+  })
+}
+function desactiveTheMenu() {
+  $openMenu.removeEventListener('click', showAllMenu)
+  $closeMenu.removeEventListener('click', hideAllMenu)
+  $menuItems.forEach($menuItem => {
+    $menuItem.removeEventListener('click', showSubMenu)
+  })
+  $goBackMenuButtons.forEach($goBackMenuButton => {
+    $goBackMenuButton.removeEventListener('click', hideSubMenu)
+  })
+}
+function addMenuInteractivity(screen){
+  if (screen.matches) {
+    activeTheMenu()
+  } else {
+    desactiveTheMenu()
+  }
+}
+function showAllMenu() {
   moveSomeMenu($menu, '-100%', '0', null)
   $body.style.overflow = 'hidden'
   $body.style.maxHeight = '100vh'
-})
-$closeMenu.addEventListener('click', () => {
+}
+function hideAllMenu() {
   moveSomeMenu($menu, '0%', '-100%', null)
   $body.style.overflow = 'initial'
   $body.style.maxHeight = 'initial'
   $scrollArea.style.height = '40px'
-})
-$menuItems.forEach($menuItem => {
-  const $menuContent = $menuItem.parentElement.childNodes[3]
-  $menuItem.addEventListener('click', () => {
-    $menuContent.style.display = 'block'
-    moveSomeMenu($menuContent, '100%', '0', 'hide')
-  })
-})
-$goBackMenuButtons.forEach($goBackMenuButton => {
-  const $menuContent = $goBackMenuButton.parentElement
-  $goBackMenuButton.addEventListener('click', () => {
-    setTimeout(() => {
-      $menuContent.style.display = 'none'
-    }, 500);
-    moveSomeMenu($menuContent, '0', '100%', 'show')
-  })
-})  
-
+}
+// Lo haremos asi por que si usamos funciones anonimas, 
+// en cada evento se creara un nueva referencia a la funcion y no podremos 
+// eliminar el evento, es mejor rastrear el origen del click
+// que remplazar nodos con cada click
+function showSubMenu(e) {
+  let $menuContent = null
+  if(e.path.length === 10){
+    // You don't know where the user is going to touch
+    $menuContent = e.path[1].childNodes[3]
+  } else {
+    $menuContent = e.path[2].childNodes[3]
+  }
+  $menuContent.style.display = 'block'
+  moveSomeMenu($menuContent, '100%', '0', 'hide')
+}
+function hideSubMenu(e) {
+  const $menuContent = e.path[2]
+  setTimeout(() => {
+    $menuContent.style.display = 'none'
+  }, 500);
+  moveSomeMenu($menuContent, '0', '100%', 'show')
+}
 function moveSomeMenu(itemToAnimate, start, end, stateToBe) {
-  console.log(itemToAnimate, start, end, stateToBe)
   itemToAnimate.animate([
     {
       left: `${start}`
@@ -60,4 +90,11 @@ function hideEveryThing(){
 function showEveryThing(){
   $moreMenu.style.display = 'block'
   $scrollArea.style.height = '1400px'
+}
+
+const tabletOfSmaller = window.matchMedia('(max-width: 839px)')
+tabletOfSmaller.addListener(addMenuInteractivity)
+
+if(tabletOfSmaller.matches){
+  activeTheMenu()
 }
