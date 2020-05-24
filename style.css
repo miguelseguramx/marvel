@@ -30,6 +30,7 @@ body {
   font-family: var(--normal);
   letter-spacing: 1px;
   color: #202020;
+  overflow-x: hidden;
 }
 ul{
   padding: 0;
@@ -1033,7 +1034,8 @@ footer__social-title*/
 @media (max-width: 839px) {
   /* Master hero */
   .master-hero__carousel-img-container{
-    min-height: 70vh;
+    min-height: 800px;
+    height: 70vh;
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0% );
   }
   .master-hero__img-container{

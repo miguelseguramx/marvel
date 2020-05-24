@@ -14,11 +14,13 @@
 <body >
 
   <header class="header">
+    <input class="menu__checkbox" type="checkbox" id="burguer-menu" value="menu-mobile">
+    <label class="menu__icon" for="burguer-menu"></label>
     <div class="header__top">
       <div class="header__top-grid">
-        <div class="burguer-menu">
-          <img class="header__top-img" src="./static/burger-menu-icon.svg" alt="Menu de hamburguesa">
-        </div>
+        <button class="burguer-menu">
+
+        </button>
         <div class="user-menu">
           <a class="header__top-link" href="https://www.marvel.com/signin" >
             <img class="header__top-img" src="./static/in-icon.svg" alt="User Login">
@@ -42,24 +44,21 @@
         </div>
       </div>
     </div>
-    <div class="menu">
+    <nav class="menu">
       <div class="menu__scroll-area">
-        <div class="menu__close-container">
-          <img src="static/close.svg" alt="Some image" class="menu__close-img">
-        </div>
         <ul class="menu__container">
           <li class="menu-item" >
-            <div class="menu-item__title-container">
+            <button class="menu-item__title-container">
               <p class="menu-item__title">
                 Videos
               </p>
               <img src="static/arrow.svg" alt="arrow to right" class="menu-item__title-arrow">
-            </div>
+            </button>
             <div class="menu-item__content-container">
-              <button class="menu-item__nav-title-container">
+              <div class="menu-item__nav-title-container">
                 <img src="./static/arrow.svg" alt="arrow" class="menu-item__nav-img">
                 <p class="menu-item__nav-title">Videos</p>
-              </button>
+              </div>
               <ul class="menu-item__nav">
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/watch/trailers-and-extras">Trailers & extras</a></li>
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/watch/digital-series">Digital Series</a></li>
@@ -147,17 +146,17 @@
             </div>
           </li>
           <li class="menu-item">
-            <div class="menu-item__title-container">
+            <button class="menu-item__title-container">
               <p class="menu-item__title">
                 Characters
               </p>
               <img src="static/arrow.svg" alt="arrow to right" class="menu-item__title-arrow">
-            </div>
+            </button>
             <div class="menu-item__content-container">
-              <button class="menu-item__nav-title-container">
+              <div class="menu-item__nav-title-container">
                 <img src="./static/arrow.svg" alt="arrow" class="menu-item__nav-img">
                 <p class="menu-item__nav-title">Characters</p>
-              </button>
+              </div>
               <ul class="menu-item__nav">
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/characters">All characters</a></li>
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/teams-and-groups">Teams and groups</a></li>
@@ -243,17 +242,17 @@
             </div>
           </li>
           <li class="menu-item">
-            <div class="menu-item__title-container">
+            <button class="menu-item__title-container">
               <p class="menu-item__title">
                 Comics
               </p>
               <img src="static/arrow.svg" alt="arrow to right" class="menu-item__title-arrow">
-            </div>
+            </button>
             <div class="menu-item__content-container">
-              <button class="menu-item__nav-title-container">
+              <div class="menu-item__nav-title-container">
                 <img src="./static/arrow.svg" alt="arrow" class="menu-item__nav-img">
                 <p class="menu-item__nav-title">Comics</p>
-              </button>
+              </div>
               <ul class="menu-item__nav">
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/comics/calendar">Relese Calendar</a></li>
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/comics/unlimited">Marvel Unlimited</a></li>
@@ -321,17 +320,17 @@
             </div>
           </li>
           <li class="menu-item">
-            <div class="menu-item__title-container">
+            <button class="menu-item__title-container">
               <p class="menu-item__title">
                 Movies
               </p>
               <img src="static/arrow.svg" alt="arrow to right" class="menu-item__title-arrow">
-            </div>
+            </button>
             <div class="menu-item__content-container">
-              <button class="menu-item__nav-title-container">
+              <div class="menu-item__nav-title-container">
                 <img src="./static/arrow.svg" alt="arrow" class="menu-item__nav-img">
                 <p class="menu-item__nav-title">Movies</p>
-              </button>
+              </div>
               <ul class="menu-item__nav">
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/movies/black-widow">Black Widow</a></li>
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/movies/avengers-endgame">Avengers EndGame</a></li>
@@ -413,17 +412,17 @@
             </div>
           </li>
           <li class="menu-item">
-            <div class="menu-item__title-container">
+            <button class="menu-item__title-container">
               <p class="menu-item__title">
                 Tv Shows
               </p>
               <img src="static/arrow.svg" alt="arrow to right" class="menu-item__title-arrow">
-            </div>
+            </button>
             <div class="menu-item__content-container">
-              <button class="menu-item__nav-title-container">
+              <div class="menu-item__nav-title-container">
                 <img src="./static/arrow.svg" alt="arrow" class="menu-item__nav-img">
                 <p class="menu-item__nav-title">TV Shows</p>
-              </button>
+              </div>
               <ul class="menu-item__nav">
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/tv-shows/marvel-s-runaways/3">Marvel's Runaways | Season 3</a></li>
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/tv-shows/marvel-s-hero-project/1">Marvel Hero Project | Season 1</a></li>
@@ -505,17 +504,17 @@
             </div>
           </li>
           <li class="menu-item">
-            <div class="menu-item__title-container">
+            <button class="menu-item__title-container">
               <p class="menu-item__title">
                 Games
               </p>
               <img src="static/arrow.svg" alt="arrow to right" class="menu-item__title-arrow">
-            </div>
+            </button>
             <div class="menu-item__content-container">
-              <button class="menu-item__nav-title-container">
+              <div class="menu-item__nav-title-container">
                 <img src="./static/arrow.svg" alt="arrow" class="menu-item__nav-img">
                 <p class="menu-item__nav-title">Games</p>
-              </button>
+              </div>
               <ul class="menu-item__nav">
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/games/marvel-ultimate-alliance-3">Marvel Ultimate Alliance 3</a></li>
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/games/marvel-s-iron-man-vr">Marvel's Iron Man VR</a></li>
@@ -596,17 +595,17 @@
             </div>
           </li>
           <li class="menu-item">
-            <div class="menu-item__title-container">
+            <button class="menu-item__title-container">
               <p class="menu-item__title">
                 News
               </p>
               <img src="static/arrow.svg" alt="arrow to right" class="menu-item__title-arrow">
-            </div>
+            </button>
             <div class="menu-item__content-container">
-              <button class="menu-item__nav-title-container">
+              <div class="menu-item__nav-title-container">
                 <img src="./static/arrow.svg" alt="arrow" class="menu-item__nav-img">
                 <p class="menu-item__nav-title">News</p>
-              </button>
+              </div>
               <ul class="menu-item__nav">
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/articles/culture-lifestyle/join-venom-and-thor-writer-donny-cates-on-joe-q-s-mornin-warm-up">Latest News</a></li>
                 <li class="menu-item__nav-text"><a href="https://www.marvel.com/articles">All news</a></li>
@@ -673,12 +672,12 @@
             </div>
           </li>
           <li class="menu-item">
-            <div class="menu-item__title-container">
+            <button class="menu-item__title-container">
               <p class="menu-item__title">
                 More
               </p>
               <img src="static/arrow.svg" alt="arrow to right" class="menu-item__title-arrow">
-            </div>
+            </button>
             <div class="menu-item__content-container" id="moreMenu">
               <div class="menu-item__more-container">
                 <ul class="menu-item__more-links">
@@ -747,7 +746,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   </header>
 
   <div class="header__promo">
@@ -1875,7 +1874,6 @@
       </div>
     </div>
   </footer>
-<script src="index.js"></script>
 <script src="headerScroll.js"></script>
 </body>
 </html>
