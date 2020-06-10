@@ -59,6 +59,7 @@ figure{
 
 img {
   max-width: 100%;
+  vertical-align: bottom;
 }
 /* Scroll bar */
 
@@ -160,12 +161,7 @@ img {
   min-width: fit-content;
   position: absolute;
   left: 000vw; /*Adjustar para  debuggear*/
-  animation-name: hero-carousel-desktop;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
   opacity: 1;
-  will-change: opacity left;
 }
 .master-hero__img-container{
   min-width: 100vw;
@@ -243,15 +239,10 @@ img {
   top: 0px;
   left: 20px;
   height: 6px;
-  /* width: 19.2%; Similar o equivalente a 192 px en tamaño maximo */
-  animation-name: progress-bar-desktop-large;
   background-color: var(--red-marvel);
-  animation-duration: 20000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  will-change: width left;
 }
 .master-hero__overlay-titles-item{
+  cursor: pointer;
   padding: 20px 30px 20px 0;
 }
 .master-hero__overlay-title{
@@ -291,17 +282,19 @@ img {
 /* Hero */
 .hero{
   position: relative;
-  /* height: 100%; */
+  display: flex;
   overflow: hidden;
   min-height: fit-content;
   max-height: 560px;
   clip-path: polygon(0 0, 0 100%, 100% 90%, 100% 0% );
 }
 .hero__black-container{
-  position: absolute;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  flex-grow: 1;
   top: 0px;
-  height: 100%;
-  max-height: 560px;
+  height: 560px;
   width: 100%;
   background-color: var(--dark);
   color: white;
@@ -309,23 +302,41 @@ img {
   clip-path: polygon(0 0, 0 100%, 55% 100%, 45% 0% );
 }
 .hero__content-container{
+  flex-grow: 1;
   max-width: 1240px;
   margin: auto;
   padding-left: 50px;
+  box-sizing: border-box;
   height: 100%;
   display:flex;
   flex-direction: column;
   justify-content: center;
 }
 .hero__img-container{
-  position: relative;
+  align-self: center;
   z-index: -1;
-  width: calc(100% + 191px);
+  position: absolute;
+  left: 45%;
+  width: 55%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-self: flex-end;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-/* .hero__img */
+.hero--first{
+  background-image: url('https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvelunlimited_base_set_dsk.jpg');
+}
+.hero--second{
+  background-image: url('https://terrigen-cdn-dev.marvel.com/content/prod/1x/disneyplusall_base_set_04.jpg'  );
+}
+.hero--third{
+  background-image: url('https://terrigen-cdn-dev.marvel.com/content/prod/1x/0420_mu_base_set_dsk.jpg')
+}
+.hero--fourth{
+      background-image: url('https://terrigen-cdn-dev.marvel.com/content/prod/1x/new_com_20200518_set_01.jpg')
+}
 .hero__content{
   max-width: 40%;
   padding-left: 20px;
@@ -1014,9 +1025,6 @@ footer__social-title*/
 
 
 @media(max-width: 1200px){
-  .hero__img-container{
-    width: calc(100% + calc(191px * 1.3));
-  }
   .videos-list__container{
     max-height: 40vw;
   }
@@ -1025,9 +1033,6 @@ footer__social-title*/
 @media (max-width: 1045px) {
   .footer__about-left{
     min-width: 100px;
-  }
-  .hero__img-container{
-    width: calc(100% + calc(191px * 1.47));
   }
 }
 
@@ -1118,18 +1123,21 @@ footer__social-title*/
 
   /* Hero */
   .hero{
-    clip-path: polygon(0 0, 0 100%, 100% 95%, 100% 0% );
+    clip-path: polygon(0 0, 0 100%, 100% 90%, 100% 0% );
     max-height: 100%;
+    flex-wrap: wrap;
   }
   .hero__black-container{
+    height: 450px;
     position: static;
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0% );
   }
   .hero__img-container{
-    width: 100%;
-  }
-  .hero__img{
-    width: 100%;
+    flex-grow: 1;
+    position: static;
+    height: 85vw;
+    max-height: 400px;
+    background-position: 60% 50%
   }
   .hero__eyebrown-content{
     font-size: 14px;
