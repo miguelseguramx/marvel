@@ -17,13 +17,13 @@ function handlePromoIntersection(entries) {
 
 // We can use $headerPromo to do this but I prefer do something independent and with other tools
 const $header = document.querySelector('.header')
-let previusPosition = 0
+let previusPosition = window.scrollY
 
 window.onscroll = () => toggleMenuVisibility()
 
 function toggleMenuVisibility() {
-  const actualPosition = document.documentElement.scrollTop
-  if ( actualPosition - previusPosition > 0 ){
+  const actualPosition = window.scrollY
+  if ( previusPosition > 50 && actualPosition - previusPosition > 0 ){
     $header.classList.add('header--inactive')
   } else {
     $header.classList.remove('header--inactive')
