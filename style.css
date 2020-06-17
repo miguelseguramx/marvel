@@ -392,6 +392,7 @@ img {
 .master-hero__btn-container,
 .hero__btn-container{
   display: flex;
+  flex-wrap: wrap;
 }
 
 /* Hero footer */
@@ -468,7 +469,6 @@ img {
   display: grid;
   grid-template-columns: repeat(22, 175px);
   grid-column-gap: 20px;
-  overflow: auto;
   position: relative;
   bottom: 70px;
   background-color: var(--white);
@@ -1151,7 +1151,6 @@ footer__social-title*/
   /* Hero Footer */
   .hero-footer{
     height: fit-content;
-    width: calc(100vw);
     overflow: auto;
     margin-bottom: 10px;
   }
@@ -1185,7 +1184,7 @@ footer__social-title*/
   .tipical-grid__items{
     grid-template-columns: repeat(auto-fill,minmax(31.66%,1fr));
   }
-  
+
   /* Feed */
   .feed__container{
     padding: 0px 30px;
