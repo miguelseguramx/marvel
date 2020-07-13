@@ -12,7 +12,6 @@ function createAnimation() {
   if (counter === 5 ) counter = 0
 
   $HeroButtons.forEach(($HeroButton, index) => {
-    console.log(index, counter)
     if (index === counter) {
       $HeroButton.style.color = 'var(--red-marvel)'
     } else {
