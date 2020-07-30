@@ -446,7 +446,7 @@ img {
 .tipical-grid__item-section--red,
 .work-card__title,
 .hero-footer__item-section{
-  color: var(--red-marvel); 
+  color: var(--red-marvel);
   line-height: 1;
   letter-spacing: 1px;
   font-family: var(--condensed-bold);
@@ -471,7 +471,16 @@ img {
   grid-column-gap: 20px;
   position: relative;
   bottom: 70px;
+  overflow: auto;
   background-color: var(--white);
+}
+@media(max-width: 839px){
+  .hero-footer.hero-footer--works-22{
+    overflow: auto;
+  }
+  .hero-footer.hero-footer--works-22 .hero-footer__list{
+    min-width: initial;
+  }
 }
 .hero-footer__list--grid-6 .work-card{
   max-width: 175px;
@@ -634,6 +643,7 @@ img {
   margin: auto;
   display: grid;
   grid-template-columns: 75% 25%;
+  grid-template-rows: 506px 1fr;
 }
 .video{
   width: 100%;
@@ -659,7 +669,6 @@ img {
   margin: 16px 0px 0px 0px;
 }
 .videos-list__container{
-  max-height: 37vw;
   overflow: auto;
 }
 .videos-list{
@@ -1218,6 +1227,7 @@ footer__social-title*/
   .videos__container{
     display: grid;
     grid-template-columns: 100%;
+    grid-template-rows: initial;
   }
   .videos-list__container{
     min-height: 220px;
@@ -1315,7 +1325,8 @@ footer__social-title*/
   }
 }
 
-@media (max-width: 600px) {  
+@media (max-width: 600px) {
+
   .master-hero__carousel-img-container{
     min-height: 120vh;
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0% );
